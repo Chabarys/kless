@@ -1,0 +1,226 @@
+header {
+  width: 100%;
+
+  nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
+    min-height: 50px;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: all 0.3s;
+
+    &.scroll {
+      background-color: var(--white-color);
+      box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    button {
+
+      &.abrir {
+        display: none;
+        align-items: flex-end;
+        justify-content: flex-end;
+        background-color: transparent;
+        width: 30px;
+        height: 15px;
+        min-width: 30px;
+        min-height: 15px;
+        position: relative;
+        transition: all 0.3s;
+        margin-left: auto;
+
+        &:hover {
+          div {
+            background-color: var(--primary-color);
+          }
+        }
+
+        &.ativo {
+          width: 30px;
+          height: 30px;
+          min-width: 30px;
+          min-height: 30px;
+
+          .maior {
+            top: 50%;
+            right: 0;
+            transform: rotate(-45deg);
+          }
+
+          .menor {
+            width: 30px;
+            min-width: 30px;
+            top: 50%;
+            right: 0;
+            transform: rotate(45deg);
+          }
+        }
+
+        .maior {
+          width: 30px;
+          height: 4px;
+          min-width: 30px;
+          min-height: 4px;
+          border-radius: 40px;
+          background-color: var(--primary-color-bold);
+          position: absolute;
+          top: 0;
+          right: 0;
+          transition: all 0.3s;
+          pointer-events: none;
+        }
+
+        .menor {
+          width: 20px;
+          height: 4px;
+          min-width: 20px;
+          min-height: 4px;
+          border-radius: 40px;
+          background-color: var(--primary-color-bold);
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          transition: all 0.3s;
+          pointer-events: none;
+        }
+      }
+    }
+
+    p, img {
+
+        &.logo {
+          width: 100%;
+          max-width: 170px;
+          font-size: var(--font-size-xl);
+          font-family: var(--font-family-title);
+      }
+    }
+
+    .opcoes {
+      display: flex;
+      align-items: center;
+      width: 65%;
+      justify-content: center;
+
+      a {
+        position: relative;
+        font-family: var(--regular);
+        font-size: clamp(0.8rem, 1vw, 1rem);
+        color: var(--paragraph-color);
+        margin: 0 0 0 30px;
+        font-weight: bold;
+
+        &:hover {
+          color: var(--primary-color-bold);
+
+          span {
+            width: 100%;
+          }
+        }
+
+        &.acesso {
+          margin: 0 0 0 auto;
+          font-family: var(--font-family-title);
+          color: var(--green-color);
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          font-weight: bold;
+
+          &:hover i {
+            margin: 0 0 0 15px;
+          }
+
+          i {
+            font-size: 20px;
+            transition: 0.3s all;
+          }
+        }
+
+        span {
+          position: absolute;
+          bottom: -5px;
+          left: 0;
+          width: 0;
+          height: 1px;
+          background-color: var(--primary-color-bold);
+          transition: 0.3s all;
+        }
+      }
+    }
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 1400px) {
+  header {
+
+    nav {
+      padding: 10px 30px;
+      
+      p {
+        .logo {
+          max-width: 150px;
+        }
+      }
+      .opcoes {
+        position: fixed;
+        top: 85px;
+        right: 20px;
+        width: initial;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        background-color: var(--primary-color);
+        padding: 20px;
+        border-radius: 10px;
+        z-index: 50;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: all 0.3s;
+
+        &.mostrar {
+          opacity: 1;
+          visibility: visible;
+          pointer-events: all;
+        }
+
+        a {
+          color: var(--white-color);
+          margin: 0 0 20px 0;
+
+          &:hover {
+            color: var(--green-color);
+          }
+
+          &.acesso {
+            color: var(--green-color);
+
+            i {
+              font-size: 15px;
+              margin: 0 0 0 5px;
+              transition: 0.3s all;
+            }
+          }
+
+          span {
+            background-color: var(--green-color);
+          }
+        }
+      }
+
+      button {
+        &.abrir {
+          display: flex;
+        }
+      }
+    }
+  }
+}

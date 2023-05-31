@@ -1,0 +1,54 @@
+/* Fontes */
+@font-face {
+    font-family: 'Mark-pro';
+    src: url('../fonts/MarkPro-Regular.ttf') 
+}
+@font-face {
+    font-family: 'filson-black';
+    src: url('../fonts/FilsonPro-Black.woff') format('woff');;
+}
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Ubuntu:wght@400;500;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Righteous&display=swap');
+
+:root {
+    --primary-color: #cc8d16;
+    --primary-color-bold: #b77a09;
+    --primary-color-light: #e89f17;
+    --secondary-color: #050505;
+
+    --heading-color: #292922;
+
+    --white-color: #FFFFFF;
+    --black-color: #081508;
+
+    --gray-color: #F6F6F6;
+    --paragraph-color: #616162;
+    --title-color: #071408;
+
+    --background-button-color: linear-gradient(to right, #cc8d16, rgb(197, 140, 35));
+
+    --green-color: #004D43;
+    --green-color-light: #16DAB2;
+
+    // --font-family-title: 'filson-black', sans-serif;
+    --font-family-title: 'Poppins', sans-serif;
+    --font-family-paragraph: 'Mark-pro', sans-serif;
+
+    --font-size-md: 16px;
+    --font-size-sm: 14px;
+    --font-size-xs: 12px;
+    --font-size-xxs: 10px;
+
+    --font-size-lg: 20px;
+    --font-size-xl: 24px;
+    --font-size-xxl: 32px;
+    --font-size-xxxl: 48px;
+
+}
+
+// Pixels X REM
+$browser-context: 16;
+@function rem($pixels, $context: $browser-context) {
+    @return #{$pixels/$context}rem;
+}
