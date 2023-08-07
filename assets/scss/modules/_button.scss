@@ -1,7 +1,23 @@
 /*=====================================
-Button
+B O T Ã O
 ====================================*/
 
-button {
-  
+.botao {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-family: var(--font-family-title);
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: var(--font-size-md);
+  text-transform: uppercase;
+  color: var(--white-color);
+  background: var(--background-button-color);
+  border-radius: 10px;
+  transition: 0.3s all;
+
+  &:hover {
+    filter: brightness(90%);
+  }
 }

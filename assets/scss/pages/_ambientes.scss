@@ -5,35 +5,38 @@
   display: grid;
   grid-gap: 20px;
   grid-template-areas: 
-    'cozinha cozinha sala'
-    'cozinha cozinha quarto';
-
+    'cozinha cozinha cozinha sala sala'
+    'cozinha cozinha cozinha quarto quarto';
+  padding-bottom: 50px;
     .item {
       position: relative;
       border-radius: 20px;
       cursor: pointer;
-      transition: .3s;
-
-      &:hover {
-        opacity: .8;
-      }
 
       &.cozinha {
         grid-area: cozinha;
+        height: 800px;
       }
     
       &.sala {
         grid-area: sala;
+        height: calc((800px / 2) - 10px);
       }
     
       &.quarto {
         grid-area: quarto;
+        height: calc((800px / 2) - 10px);
       }
 
       img {
         width: 100%;
         height: 100%;
         border-radius: 20px;
+        transition: .3s;
+
+        &:hover {
+          filter: brightness(75%);
+        }
 
         &.dimensionado {
           max-height: 450px;
@@ -53,6 +56,7 @@
           font-weight: bold;
           text-transform: uppercase;
           letter-spacing: 1px;
+          color: var(--paragraph-color);
         }
       }
 

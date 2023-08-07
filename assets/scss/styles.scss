@@ -12,8 +12,12 @@
 // 2 - Import modules
 @import 'modules/header';
 @import 'modules/button';
-@import 'modules/media-queries';
+@import 'modules/title';
 
-// 3 - Import pages
+// 3 - Import partials
 @import 'pages/home';
 @import 'pages/ambientes';
+@import 'pages/sobre';
+@import 'pages/depoimentos';
+@import 'pages/rodape';
+@import 'modules/media-queries';

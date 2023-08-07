@@ -1,0 +1,93 @@
+.depoimentos {
+  height: 60vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--gray-color);
+  padding-bottom: 160px;
+
+  .testimonial {
+    position: relative;
+    max-width: 900px;
+    width: 100%;
+    padding: 50px 0;
+    overflow: hidden;
+    
+    .image {
+      height: 170px;
+      width: 170px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+    
+    .slide {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+
+      p {
+        text-align: center;
+        padding: 0 100px;
+        font-size: 16px;
+        font-weight: 500;
+        color: var(--heading-color);
+      }
+      
+      .quote-icon {
+        font-size: 30px;
+        color: var(--primary-color);
+      }
+      
+      .details {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+        
+        .name {
+          font-size: 16px;
+          font-weight: 600;
+          color: var(--heading-color);
+        }
+
+        .job {
+          font-size: 14px;
+          font-weight: 400;
+          color: var(--heading-color);
+        }
+      }
+    }
+  }
+}
+
+
+/* swiper button css */
+.nav-btn {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  transform: translateY(30px);
+  background-color: rgba(0, 0, 0, 0.1);
+  transition: 0.2s;
+}
+.nav-btn:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.nav-btn::after,
+.nav-btn::before {
+  font-size: 20px;
+  color: #fff;
+}
+.swiper-pagination-bullet {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.swiper-pagination-bullet-active {
+  background-color: var(--primary-color);
+}
+
+.swiper-button-prev, .swiper-button-next {
+  color: var(--primary-color);
+}

@@ -1,0 +1,16 @@
+/*=====================================
+T I T U L O
+====================================*/
+
+.titulo {
+  font-family: var(--font-family-title);
+  font-size: var(--font-size-xxl);
+  color: var(--black-color);
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  &.titulo--claro {
+    color: var(--gray-color);
+  }
+}
